@@ -9,46 +9,47 @@
 //Man、Women(具体产品类)：简单工厂模式的创建目标，所有被创建的对象都是某个具体类的实例。它要实现抽象People中声明的抽象方法(有关抽象类)
 
 
-interface PeopleInterface
+interface OperationInterface
 {
-    // 走路
-    function walk();
+    function getVal($a,$b);
 }
 
-class Man implements PeopleInterface
+class OperationAdd implements OperationInterface
 {
-    function walk()
+    public function getVal($a, $b)
     {
-        // TODO: Implement Walk() method.
-        echo 'Man: walk';
+        // TODO: Implement getVal() method.
+        return $a + $b;
     }
 }
 
-class Women implements PeopleInterface
+class OperationSub implements OperationInterface
 {
-    function walk()
-    {
-        // TODO: Implement walk() method.
-        echo "Women: walk";
-    }
+   public function getVal($a, $b)
+   {
+       // TODO: Implement getVal() method.
+       return $a - $b;
+   }
 }
 
-class SimpleFactory
+class Factory
 {
-    static function create($type)
+    private static $instance;
+
+    static function operation($op)
     {
-        switch ($type) {
-            case 'man':
-                return new Man();
-            case 'women':
-                return new Women();
+        switch ($op) {
+            case '+':
+                self::$instance = new OperationAdd();
+                break;
+            case '-':
+                self::$instance = new OperationSub();
+                break;
         }
+        return self::$instance;
     }
 
 }
 
-$man = SimpleFactory::create('man');
-$man->walk();
-
-$women = SimpleFactory::create('women');
-$women->walk();
+$factory = Factory::operation('+');
+echo $factory->getVal(1,2);

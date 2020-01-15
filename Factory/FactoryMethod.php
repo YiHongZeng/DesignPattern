@@ -4,55 +4,51 @@
  */
 
 
-interface PeopleInterface
+interface OperationInterface
 {
-    // 走路
-    function walk();
+    function getVal($a, $b);
 }
 
-class Man implements PeopleInterface
+class OperationAdd implements OperationInterface
 {
-    function walk()
+    public function getVal($a, $b)
     {
-        // TODO: Implement Walk() method.
-        echo 'Man: walk';
+        // TODO: Implement getVal() method.
+        return $a + $b;
     }
 }
 
-class Women implements PeopleInterface
+class OperationSub implements OperationInterface
 {
-    function walk()
+    public function getVal($a, $b)
     {
-        // TODO: Implement walk() method.
-        echo "Women: walk";
+        // TODO: Implement getVal() method.
+        return $a - $b;
     }
 }
 
-// 与简单工厂方法的区别
-interface FactoryMethod
+interface FactoryInterface
 {
-    function create();
+    public function operation();
 }
 
-
-class FactoryMan implements FactoryMethod
+class FactoryAdd implements FactoryInterface
 {
-    function create()
+    public function operation()
     {
-        return new Man();
+        return new OperationAdd();
     }
 }
 
-class FactoryWoMan implements FactoryMethod
+class FactorySub implements FactoryInterface
 {
-    function create()
+    public function operation()
     {
-        return new Women();
+        return new OperationSub();
     }
 }
 
 
-
-$factory = new FactoryMan();
-$man = $factory->create();
-$man->walk();
+$addFactory = new FactoryAdd();
+$add = $addFactory->operation();
+echo $add->getVal(1,2);
