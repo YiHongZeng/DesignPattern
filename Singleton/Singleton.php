@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Singleton;
+namespace Singleton;
 
 /**
  * Singleton类
