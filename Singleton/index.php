@@ -1,12 +1,10 @@
 <?php
-namespace Factory;
 
-use Singleton\Singleton;
+require_once __DIR__ . '/Singleton.php';
 
-ini_set('display_errors', 'on');
+ini_set('display_errors', '1');
 error_reporting(E_ALL);
 
-include '../autoload.php';
 
 
 $instance = Singleton::getInstance();
