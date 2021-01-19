@@ -4,9 +4,9 @@
  * 苹果手机
  * Class MobileIPhone
  */
-require_once __DIR__ . '/AbstractMobile.php';
+require_once __DIR__ . '/InterfaceMobile.php';
 
-class MobileIPhone6 implements AbstractMobile
+class MobileIPhone6 implements InterfaceMobile
 {
 
     public function call()
@@ -15,10 +15,10 @@ class MobileIPhone6 implements AbstractMobile
         echo "IPhone 6: call" . "<br/>";
     }
 
-    public function send()
-    {
-        // TODO: Implement send() method.
-        echo "IPhone 6: send" . "<br/>";
-    }
+   public function photograph()
+   {
+       // TODO: Implement photograph() method.
+       echo "IPhone 6: photograph" . "<br/>";
+   }
 
 }

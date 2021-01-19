@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/AbstractFactory.php';
+require_once __DIR__ . '/InterfaceFactory.php';
 
-class FactoryHuawei implements AbstractFactory
+class FactoryHuawei implements InterfaceFactory
 {
     public function create()
     {

@@ -5,9 +5,9 @@
  * Class MobileIPhone
  */
 
-require_once __DIR__ . '/AbstractMobile.php';
+require_once __DIR__ . '/InterfaceMobile.php';
 
-class MobileHuawei implements AbstractMobile
+class MobileHuawei implements InterfaceMobile
 {
 
     public function call()

@@ -1,6 +1,6 @@
 <?php
 
-interface AbstractMobile
+interface InterfaceMobile
 {
     /**
      * 打电话

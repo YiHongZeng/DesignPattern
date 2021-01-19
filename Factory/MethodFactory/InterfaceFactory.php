@@ -4,7 +4,7 @@
  * 工厂类
  * Class Factory
  */
-interface AbstractFactory
+interface InterfaceFactory
 {
     public function create();
 }
