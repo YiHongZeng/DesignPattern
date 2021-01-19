@@ -3,14 +3,26 @@
 interface InterfaceMobile
 {
     /**
-     * 打电话
+     * 语音通话
      * @return mixed
      */
-    public function call();
+    public function call_voice();
 
     /**
-     * 拍照
+     * 视频通话
      * @return mixed
      */
-    public function photograph();
+    public function call_video();
+
+    /**
+     * 超清拍照
+     * @return mixed
+     */
+    public function photograph_1080();
+
+    /**
+     * 高清拍照
+     * @return mixed
+     */
+    public function photograph_720();
 }
