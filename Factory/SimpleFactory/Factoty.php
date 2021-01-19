@@ -12,15 +12,15 @@ class Factory
     {
         $class = null;
         switch ($name) {
-            case 'IPhone':
+            case '1':
                 require_once __DIR__ . '/MobileIPhone.php';
                 self::$instance = new MobileIPhone();
                 break;
-            case 'Huawei':
+            case '2':
                 require_once __DIR__ . '/MobileHuawei.php';
                 self::$instance = new MobileHuawei();
                 break;
-            case 'Xiaomi':
+            case '3':
                 require_once __DIR__ . '/MobileXiaomi.php';
                 self::$instance = new MobileXiaomi();
                 break;

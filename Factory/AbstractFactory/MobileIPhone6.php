@@ -6,19 +6,19 @@
  */
 require_once __DIR__ . '/AbstractMobile.php';
 
-class MobileIPhone implements AbstractMobile
+class MobileIPhone6 implements AbstractMobile
 {
 
     public function call()
     {
         // TODO: Implement call() method.
-        echo "IPhone: call" . "<br/>";
+        echo "IPhone 6: call" . "<br/>";
     }
 
-    public function photograph()
+    public function send()
     {
-        // TODO: Implement photograph() method.
-        echo "IPhone: photograph" . "<br/>";
+        // TODO: Implement send() method.
+        echo "IPhone 6: send" . "<br/>";
     }
 
 }
