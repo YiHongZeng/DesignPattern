@@ -1,16 +1,12 @@
 <?php
 
-interface InterfaceFactoryMobile
+/**
+ * 工厂类
+ * Class Factory
+ */
+interface InterfaceFactory
 {
-    /**
-     * 打电话
-     * @return mixed
-     */
-    public function call();
+    public function system();
 
-    /**
-     * 拍照
-     * @return mixed
-     */
     public function photograph();
 }
